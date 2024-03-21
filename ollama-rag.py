@@ -11,6 +11,7 @@ prev_url = None
 prev_data = None
 prev_vectorstore = None
 
+
 def process_url_and_question(url: str, question: str):
     global prev_url, prev_data, prev_vectorstore
     if url != prev_url:
