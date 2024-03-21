@@ -1,0 +1,33 @@
+version: '3'
+
+services:
+  chat:
+    image: ollama-chat
+    build: .
+    ports:
+      - "7860:7860"
+    networks:
+      - ollamachat
+    
+  ollama:
+    image: ollama/ollama
+    ports:
+      - 11434:11434
+    volumes:
+      - ollama:/root/.ollama
+    networks:
+      - ollamachat
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              capabilities: ["gpu"]
+              count: all
+
+networks:
+  ollamachat:
+    driver: bridge
+
+volumes:
+  ollama:

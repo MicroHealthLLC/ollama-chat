@@ -18,7 +18,7 @@ context = []
 
 #Call Ollama API
 def generate(prompt, context, top_k, top_p, temp):
-    r = requests.post('http://localhost:11434/api/generate',
+    r = requests.post('http://ollama-chat-ollama-1:11434/api/generate',
                     json={
                         'model': model,
                         'prompt': prompt,
