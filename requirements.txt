@@ -1,0 +1,5 @@
+requests
+gradio
+langchain
+langchain_community
+beautifulsoup4
