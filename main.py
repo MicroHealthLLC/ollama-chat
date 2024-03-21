@@ -13,7 +13,7 @@ from langchain.prompts import PromptTemplate
 from langchain.chains import RetrievalQA
 import gradio as gr
 
-model = 'llama2:latest' #You can replace the model name if needed
+model = 'mistral:latest' #You can replace the model name if needed
 context = [] 
 
 #Call Ollama API
